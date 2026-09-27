@@ -94,10 +94,10 @@ crearModal(
 
 ## Demo en vivo
 
-<>
+<https://youri22-eng.github.io/Actividad-3-Componente.js/>
 
 ## Video
 
 Video demo de máximo 1 minuto mostrando el problema que resuelve el componente, cómo se usa, y el resultado en acción:
 
-[Ver video demo](<>)
+[Ver video demo](<https://youtu.be/71owEDJrJlY>)
