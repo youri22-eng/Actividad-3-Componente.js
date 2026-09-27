@@ -4,7 +4,7 @@
 
 ## ¿Qué hice y qué problema resuelve?
 
-Para esta actividad hice un componente visual reutilizable en JavaScript puro, combinando dos piezas que se conectan entre sí: un **Modal** (una ventana emergente de confirmación) y un sistema de **Toast Notifications** (notificaciones pequeñas que aparecen flotando en una esquina de la pantalla y se ocultan solas).
+Para esta actividad hice un componente visual reutilizable en JavaScript puro, combinando dos piezas que se conectan entre sí: un Modal (una ventana emergente de confirmación) y un sistema de Toast Notifications (notificaciones pequeñas que aparecen flotando en una esquina de la pantalla y se ocultan solas).
 
 La idea es resolver un problema común en cualquier página: cuando el usuario va a hacer algo importante (como eliminar algo o guardar cambios), primero se le debe pedir confirmación con una ventana clara, y después se le debe avisar si la acción se realizó con éxito, sin necesidad de una alerta genérica del navegador que se ve poco profesional. El Modal se encarga de la confirmación, y el Toast se encarga del aviso final — y los dos trabajan juntos: cuando confirmas algo en el Modal, automáticamente se dispara un Toast de éxito.
 
