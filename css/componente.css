@@ -1,0 +1,116 @@
+
+
+/* modal */
+
+.fondo-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.caja-modal {
+  background-color: rgb(249, 255, 83);
+  padding: 24px;
+  border-radius: 10px;
+  max-width: 340px;
+  width: 90%;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.caja-modal h2 {
+  margin-top: 0;
+  color: #e70000;
+}
+
+.caja-modal p {
+  color: black;
+  margin-bottom: 20px;
+}
+
+/* Contenedor de los dos botones, uno al lado del otro. */
+.botones-modal {
+font-family:"Press Start 2P", system-ui;
+
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.boton-cancelar,
+.boton-confirmar {
+  font-family:"Press Start 2P", system-ui;
+
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.boton-cancelar {
+  background-color: #59fd01;
+  color: #333;
+}
+
+.boton-cancelar:hover {
+    color: white;
+  background-color: #1677ff;
+}
+
+.boton-confirmar {
+  background-color: #d64550;
+  color: white;
+}
+
+.boton-confirmar:hover {
+  background-color: #0d0d0d;
+}
+
+
+/*toast ntificación */
+
+#contenedorToasts {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 999;
+}
+.toast {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 12px 16px;
+  border-radius: 8px;
+  color: white;
+  min-width: 220px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  animation: entradaToast 0.3s ease-out;
+}
+.toast-exito {
+  background-color: #0d6f24;
+}
+.toast-error {
+    background-color: rgb(255, 63, 63);
+}
+.toast-advertencia {
+    background-color: yellow;
+}
+
+
+.icono-toast {
+  width: 24px;
+  height: 24px;
+}
+

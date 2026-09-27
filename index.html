@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Componente Modal + Toast</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/componente.css">
+
+  <style>
+    body {
+      font-family:"Press Start 2P", system-ui;
+      background-color: #030e0e;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      gap: 16px;
+    }
+
+    h1 {
+      color: #b9befa;
+      text-align: center;
+    }
+    h2{
+        color: rgb(3, 87, 231);
+        text-align: center
+    }
+
+
+    .boton-menu {
+      padding: 12px 20px;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      color: white;
+      cursor: pointer;
+      font-family:"Press Start 2P", system-ui;
+    }
+
+    .boton-menu-eliminar {
+      background-color: orange;
+      
+    }
+
+    .boton-menu-guardar {
+      background-color: blue;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>COMPONENTES EN JS</h1>
+  <h2>Modal y Toast de notificaciones</h2>
+
+
+  <button class="boton-menu boton-menu-eliminar" id="botonEliminar">
+    Eliminar cuenta
+  </button>
+
+  <button class="boton-menu boton-menu-guardar" id="botonGuardar">
+    Guardar cambios
+  </button>
+
+  <script src="js/componente.js"></script>
+  <script>
+
+    var botonEliminar = document.getElementById("botonEliminar");
+
+    // AQUI MEDIANTE EL CODIGO VAMOS A PASAR QUE TIPO DE AVISO QUEREMOS QQUE SALGA, PUEDE SER EXITO, ERROR, O EL DE ADVERTENCIA
+
+    // AQUI SE REUTILIZA PORQUE LLAMAMOS POR EJEMPLO crearModal() DOS VEVCES PERO CON DIFERENTE CONTENIDO, al igual que la notificacion
+
+    botonEliminar.addEventListener("click", function () {
+      crearModal(
+        "Eliminar cuenta",
+        "Vamos a eliminar la cuenta permanentemente, puedes darle en cancelar si no la quieres eliminar o acpetar eliminacion dandole a eliminar",
+        "Eliminar",
+        function () {
+          mostrarToast("Tu cuenta fue eliminada correctamente.", "exito", 4000);
+        }
+      );
+    });
+
+
+    var botonGuardar = document.getElementById("botonGuardar");
+
+    botonGuardar.addEventListener("click", function () {
+      crearModal(
+        "Guardar cambios",
+        "CONFIRMA SI QUIERES GUARDAR CAMBIOS PORFAVOR",
+        "Guardar",
+        function () {
+          mostrarToast("Lo sentimos no pudimos guardar sus cambios.", "error", 4000);
+        }
+      );
+    });
+  </script>
+</body>
+</html>
